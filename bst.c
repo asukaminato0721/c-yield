@@ -187,5 +187,5 @@ int32_t main()
     root = NULL;
 
     printf("\nExample finished.\n");
-    return 0;
+    return EXIT_SUCCESS;
 }

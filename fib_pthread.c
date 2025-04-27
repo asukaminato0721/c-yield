@@ -1,4 +1,4 @@
-#include "generator.h"
+#include "generator_pthread.h"
 #include <inttypes.h>
 #include <stddef.h>
 #include <stdint.h>
@@ -37,7 +37,7 @@ int32_t main()
 {
     printf("Creating Fibonacci generator...\n");
     // Create the generator, using the default stack size (pass 0) or a specified size
-    generator_t* fib_gen = generator_create(fib_generator_func, NULL, 0);
+    generator_t* fib_gen = generator_create(fib_generator_func, NULL);
     if (!fib_gen) {
         return 1;
     }
